@@ -1,0 +1,2 @@
+rootProject.name = "MoVie_Home"
+include ':app'

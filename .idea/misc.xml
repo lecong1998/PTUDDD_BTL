@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/MoVie_Home/app/src/main/res/drawable/ic_baseline_notification_important_24.xml" value="0.1125" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/MoVie_Home/app/src/main/res/drawable/ic_baseline_notifications_24.xml" value="0.1125" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/MoVie_Home/app/src/main/res/drawable/ic_baseline_search_24.xml" value="0.1125" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/MoVie_Home/app/src/main/res/drawable/tron.xml" value="0.2169230769230769" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/MoVie_Home/app/src/main/res/drawable/vien.xml" value="0.2203125" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/MoVie_Home/app/src/main/res/drawable/vien_tron.xml" value="0.2169230769230769" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/MoVie_Home/app/src/main/res/drawable/vientron.xml" value="0.2203125" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/MoVie_Home/app/src/main/res/drawable/vienvuong.xml" value="0.2203125" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/MoVie_Home/app/src/main/res/layout/activity_appmovie.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/MoVie_Home/app/src/main/res/layout/activity_detail_film.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/MoVie_Home/app/src/main/res/layout/activity_film.xml" value="0.18" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/MoVie_Home/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/MoVie_Home/app/src/main/res/layout/activity_search.xml" value="0.1" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/MoVie_Home/app/src/main/res/layout/activity_sign_in.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/MoVie_Home/app/src/main/res/layout/activity_tab_film.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/MoVie_Home/app/src/main/res/layout/activity_tabfilm.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/MoVie_Home/app/src/main/res/layout/activity_tv.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/MoVie_Home/app/src/main/res/layout/dialog_thaydoipassword.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/MoVie_Home/app/src/main/res/layout/dialog_thongtincanhan.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/MoVie_Home/app/src/main/res/layout/dulieudaxem_dialog.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/MoVie_Home/app/src/main/res/layout/fragment_content_film.xml" value="0.16" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/MoVie_Home/app/src/main/res/layout/fragment_detail.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/MoVie_Home/app/src/main/res/layout/fragment_film.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/MoVie_Home/app/src/main/res/layout/fragment_home.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/MoVie_Home/app/src/main/res/layout/fragment_login.xml" value="0.1" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/MoVie_Home/app/src/main/res/layout/fragment_most_popular.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/MoVie_Home/app/src/main/res/layout/fragment_notification.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/MoVie_Home/app/src/main/res/layout/fragment_now__playing.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/MoVie_Home/app/src/main/res/layout/fragment_popular.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/MoVie_Home/app/src/main/res/layout/fragment_profile.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/MoVie_Home/app/src/main/res/layout/fragment_register.xml" value="0.19010416666666666" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/MoVie_Home/app/src/main/res/layout/fragment_search.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/MoVie_Home/app/src/main/res/layout/fragment_t_v.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/MoVie_Home/app/src/main/res/layout/fragment_t_v__airing__today_.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/MoVie_Home/app/src/main/res/layout/fragment_t_v__ontv_.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/MoVie_Home/app/src/main/res/layout/fragment_t_v__popular_.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/MoVie_Home/app/src/main/res/layout/fragment_t_v__top_rated_.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/MoVie_Home/app/src/main/res/layout/fragment_tab_film.xml" value="0.1" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/MoVie_Home/app/src/main/res/layout/fragment_tabfilm.xml" value="0.19010416666666666" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/MoVie_Home/app/src/main/res/layout/fragment_top__rated.xml" value="0.19010416666666666" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/MoVie_Home/app/src/main/res/layout/fragment_top_movie.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/MoVie_Home/app/src/main/res/layout/fragmentnowplaying.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/MoVie_Home/app/src/main/res/layout/fragmentpopular.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/MoVie_Home/app/src/main/res/layout/fragmenttoprated.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/MoVie_Home/app/src/main/res/layout/fragmentupcoming.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/MoVie_Home/app/src/main/res/layout/item_cast.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/MoVie_Home/app/src/main/res/layout/item_comment.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/MoVie_Home/app/src/main/res/layout/item_movie_home.xml" value="0.1" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/MoVie_Home/app/src/main/res/layout/item_profile.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/MoVie_Home/app/src/main/res/layout/itemviewflipper.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/MoVie_Home/app/src/main/res/layout/layout_popular.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/MoVie_Home/app/src/main/res/layout/ratingdialog.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/MoVie_Home/app/src/main/res/menu/menu.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/MoVie_Home/app/src/main/res/menu/navigation_buttom.xml" value="0.20416666666666666" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

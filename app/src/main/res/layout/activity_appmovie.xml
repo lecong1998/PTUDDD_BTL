@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activity.Appmovie">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_weight="1"
+            android:id="@+id/home_appbar"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:background="#CC000000">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/home_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:title="Home"
+                app:titleTextColor="@color/white" />
+        </com.google.android.material.appbar.AppBarLayout>
+    </LinearLayout>
+    <FrameLayout
+        android:id="@+id/framelayout_movie"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/viewpager_activity"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="8" />
+
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:id="@+id/buttom_navigation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/white"
+                app:backgroundTint="#302226"
+                app:itemIconTint="@color/color_nav"
+                app:itemTextColor="@color/color_nav"
+                app:menu="@menu/navigation_buttom" />
+        </LinearLayout>
+    </FrameLayout>
+
+
+
+</LinearLayout>

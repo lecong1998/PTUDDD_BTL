@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:background="@drawable/vientron"
+    android:layout_marginTop="2dp"
+    android:layout_height="wrap_content">
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:id="@+id/imageview_user"
+        android:src="@drawable/_60279747_1127526494354946_6683273208343303265_n"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Username"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:paddingLeft="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:textStyle="bold"
+            android:id="@+id/username_itemcomment"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Content comment"
+            android:paddingLeft="20dp"
+            android:paddingRight="10dp"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            android:id="@+id/content_comment"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/time_comment"
+            android:text="time"
+            android:paddingLeft="20dp"/>
+
+    </LinearLayout>
+</LinearLayout>

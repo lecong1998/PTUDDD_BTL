@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/fragmentHome">
+
+    <fragment
+        android:id="@+id/fragmentHome"
+        android:name="gst.trainingcourse.movie_home.Activity.FragmentHome"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentFilm"
+        android:name="gst.trainingcourse.movie_home.Activity.FragmentFilm"
+        android:label="fragment_film"
+        tools:layout="@layout/fragment_film" >
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentProfile"
+        android:name="gst.trainingcourse.movie_home.Activity.FragmentProfile"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/fragmentTV"
+        android:name="gst.trainingcourse.movie_home.Activity.FragmentTV"
+        android:label="fragment_t_v"
+        tools:layout="@layout/fragment_t_v" >
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentTopRated"
+        android:name="gst.trainingcourse.movie_home.film.FragmentTopRated"
+        android:label="FragmentTopRated" >
+    </fragment>
+</navigation>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <!-- TODO: Update blank fragment layout -->
+    <ScrollView
+        android:layout_above="@id/layoutcomment"
+        android:id="@+id/scrollview"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentLeft="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <LinearLayout
+                android:id="@+id/youtube"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:orientation="vertical">
+                <com.google.android.youtube.player.YouTubePlayerView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/viewcontent"/>
+            </LinearLayout>
+            <TextView
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Bình Luận"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:paddingLeft="10dp"/>
+            <View
+                android:layout_marginBottom="2dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/black"/>
+            <RelativeLayout
+                    android:layout_below="@id/youtube"
+                    android:layout_alignParentBottom="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/comment_recyclerview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+    <RelativeLayout
+        android:id="@+id/layoutcomment"
+        android:padding="10dp"
+        android:background="@drawable/vienvuong"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/edt_comment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@id/dang_comment"
+            android:layout_alignParentLeft="true"
+            android:layout_marginRight="20dp"
+            android:layout_toStartOf="@+id/dang_comment"
+            android:hint="Bình luận"
+            android:paddingLeft="20dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp" />
+        <Button
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Đăng"
+            android:background="@color/purple_200"
+            android:id="@+id/dang_comment"/>
+    </RelativeLayout>
+
+</RelativeLayout>
