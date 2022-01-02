@@ -1,12 +1,12 @@
 <resources>
-    <string name="app_name">MoVie_Home</string>
+    <string name="app_name">MoVie Home</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_tabfilm">tabfilm</string>
     <string name="tab_text_1">Tab 1</string>
     <string name="tab_text_2">Tab 2</string>
-    <string name="api_key">k_88acdw9f</string>
-    <string name="api_key1">k_6pjmv041</string>
+    <string name="api_key1">k_88acdw9f</string>
+    <string name="api_key">k_6pjmv041</string>
     <string name="title_activity_tab_film">TabFilm</string>
     <string name="youtube_key">AIzaSyAiuuOF0qGTosVZVkixKHqlPJrJypvyTKY</string>
 </resources>

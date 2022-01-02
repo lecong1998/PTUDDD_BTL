@@ -6,6 +6,7 @@ import gst.trainingcourse.movie_home.entity.User.user
 interface Profile_Contract {
     interface View{
         fun getViewDataFilmWatched(listfilm : List<history_film>)
+
     }
     interface Presenter{
 

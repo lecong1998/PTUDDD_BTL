@@ -16,6 +16,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.squareup.picasso.Picasso
 import gst.trainingcourse.movie_home.DetailFilm.DetailActivity
 import gst.trainingcourse.movie_home.DetailFilm.History_filmDatabase
+import gst.trainingcourse.movie_home.DetailFilm.MovieActionDatabase
 import gst.trainingcourse.movie_home.Profile.*
 import gst.trainingcourse.movie_home.R
 import gst.trainingcourse.movie_home.SignIn.SignInActivity
@@ -25,6 +26,7 @@ import gst.trainingcourse.movie_home.api.APIClient
 import gst.trainingcourse.movie_home.entity.History.history_film
 import gst.trainingcourse.movie_home.entity.User.user
 import gst.trainingcourse.movie_home.entity.detail.moviedetail
+import gst.trainingcourse.movie_home.entity.movie_action.movie_action
 import gst.trainingcourse.movie_home.repository.MovieRepository
 import kotlinx.android.synthetic.main.activity_appmovie.*
 import kotlinx.android.synthetic.main.dialog_thaydoipassword.*
@@ -95,6 +97,56 @@ class FragmentProfile : Fragment(),OnClickItem_MovieWatched ,Profile_Contract.Vi
             laydulieudaxem()
         }
 
+        profile_favorite.setOnClickListener {
+            layphimyeuthich()
+        }
+    }
+
+    private fun layphimyeuthich() {
+        val dialogbuild : AlertDialog.Builder = AlertDialog.Builder(requireContext(),R.style.DialogFullScreen)
+        var view : View = LayoutInflater.from(requireContext()).inflate(R.layout.dulieudaxem_dialog,null)
+        dialogbuild.setView(view)
+        val dialog = dialogbuild.create()
+        dialog.show()
+
+        var listfavorite = ArrayList<movie_action>()
+        listmovie   = ArrayList<moviedetail>()
+        listfavorite = MovieActionDatabase.getDataBase(requireContext()).movie_actionDao().getMovieListFavorite(username!!,true) as ArrayList<movie_action>
+        if (listfavorite == null)
+        {
+            Toast.makeText(requireContext(),"No favorite movies yet!",Toast.LENGTH_LONG).show()
+            return
+        }else{
+            listfavorite.forEach {
+                val call: Call<moviedetail> = APIClient.getClient.getDetailMovie(activity?.getString(R.string.api_key)!!,it.id_movie!!)
+                call.enqueue(object : Callback<moviedetail>{
+                    @SuppressLint("NotifyDataSetChanged")
+                    override fun onResponse(call: Call<moviedetail>, response: Response<moviedetail>)  {
+                        if (response.isSuccessful)
+                        {
+                            var adapter = listmovie?.let { adapter_moviewatch(it,this@FragmentProfile) }
+                            adapter.listmovie.add(response.body()!!)
+                            view.history_watch_recyclerview.layoutManager = GridLayoutManager(requireContext(),2,GridLayoutManager.VERTICAL,false)
+                            view.history_watch_recyclerview.adapter = adapter
+                            Log.e("Test","Thành công")
+
+                        }
+                    }
+
+                    override fun onFailure(call: Call<moviedetail>, t: Throwable) {
+                        Log.e("Test","Thất bại")
+                    }
+                })
+            }
+        }
+
+        view?.history_watch_recyclerview?.adapter?.notifyDataSetChanged()
+
+        view.dulieuxem_back.setOnClickListener {
+            dialog.dismiss()
+        }
+
+
     }
 
     @SuppressLint("ResourceAsColor")
@@ -156,10 +208,6 @@ class FragmentProfile : Fragment(),OnClickItem_MovieWatched ,Profile_Contract.Vi
     }
 
     private fun thongtincanhandialog() {
-
-
-        Log.e("loi",user?.username.toString())
-        Toast.makeText(context,user?.fullname.toString(),Toast.LENGTH_LONG).show()
 
         val dialogBuilder : AlertDialog.Builder = AlertDialog.Builder(requireContext(),R.style.DialogProfile)
         val view = LayoutInflater.from(activity).inflate(R.layout.dialog_thongtincanhan,null)

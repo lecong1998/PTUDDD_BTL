@@ -17,4 +17,7 @@ interface movie_actionDao {
     @Update(onConflict = REPLACE)
     fun updateMovieAction(movieAction: movie_action)
 
+    @Query("SELECT * FROM action_film WHERE username = :username AND favorite = :value")
+    fun getMovieListFavorite(username: String, value : Boolean) : List<movie_action>?
+
 }

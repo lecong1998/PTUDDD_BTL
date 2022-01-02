@@ -19,6 +19,7 @@ import gst.trainingcourse.movie_home.entity.movie_action.movie_action
 import gst.trainingcourse.movie_home.repository.MovieRepository
 import kotlinx.android.synthetic.main.fragment_detail.*
 import kotlinx.android.synthetic.main.ratingdialog.view.*
+import java.lang.NullPointerException
 
 class DetailActivity: AppCompatActivity(), DetailFilmContract.View {
 
@@ -46,24 +47,26 @@ class DetailActivity: AppCompatActivity(), DetailFilmContract.View {
         id_movie?.let { presenter.getDetailFilm(it) }
       //  presenter.getMovieAction(username!!,id_movie!!)
 
+        try {
+            movieAction = MovieActionDatabase.getDataBase(applicationContext).movie_actionDao().getMovieAction(username!!,id_movie!!)
+            if (movieAction == null)
+            {
+                movieAction = movie_action(username,id_movie,false,0F,false)
+                MovieActionDatabase.getDataBase(applicationContext).movie_actionDao().insertMovieAction(movieAction!!)
+            }
+            if (movieAction?.favorite == false)
+            {
+                detailfilm_btnfavorite.setImageResource(R.drawable.ic_baseline_favorite_24)
+            }
+            else
+            {
+                detailfilm_btnfavorite.setImageResource(R.drawable.ic_favorite)
+            }
 
-        movieAction = MovieActionDatabase.getDataBase(applicationContext).movie_actionDao().getMovieAction(username!!,id_movie!!)
-        if (movieAction == null)
+        }catch (e: NullPointerException)
         {
-            movieAction = movie_action(username,id_movie,false,0F,false)
-            MovieActionDatabase.getDataBase(applicationContext).movie_actionDao().insertMovieAction(movieAction!!)
+            e.printStackTrace()
         }
-        if (movieAction?.favorite == false)
-        {
-            detailfilm_btnfavorite.setImageResource(R.drawable.ic_baseline_favorite_24)
-        }
-        else
-        {
-            detailfilm_btnfavorite.setImageResource(R.drawable.ic_favorite)
-        }
-
-
-
 
         /*-------------------------favorite----------------------------*/
 
@@ -72,7 +75,7 @@ class DetailActivity: AppCompatActivity(), DetailFilmContract.View {
             movieAction = MovieActionDatabase.getDataBase(applicationContext).movie_actionDao().getMovieAction(username!!,id_movie!!)
             if (movieAction?.favorite == false)
             {
-                detailfilm_btnfavorite.setImageResource(R.drawable.ic_baseline_favorite_24)
+                detailfilm_btnfavorite.setImageResource(R.drawable.ic_favorite)
                 movieAction = MovieActionDatabase.getDataBase(applicationContext).movie_actionDao().getMovieAction(username!!,id_movie!!)
                 movieAction?.favorite = true
                 MovieActionDatabase.getDataBase(applicationContext).movie_actionDao().updateMovieAction(movieAction!!)
@@ -80,7 +83,7 @@ class DetailActivity: AppCompatActivity(), DetailFilmContract.View {
             }
             else
             {
-                detailfilm_btnfavorite.setImageResource(R.drawable.ic_favorite)
+                detailfilm_btnfavorite.setImageResource(R.drawable.ic_baseline_favorite_24)
                 movieAction = MovieActionDatabase.getDataBase(applicationContext).movie_actionDao().getMovieAction(username!!,id_movie!!)
                 movieAction?.favorite = false
                 MovieActionDatabase.getDataBase(applicationContext).movie_actionDao().updateMovieAction(movieAction!!)
